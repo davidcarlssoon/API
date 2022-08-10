@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:locn="http://www.w3.org/ns/locn#"
+	xmlns:schema="http://schema.org/"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:adms="http://www.w3.org/ns/adms#"
+	xmlns:odrs="http://schema.theodi.org/odrs#"
+	xmlns:spdx="http://spdx.org/rdf/terms#"
+	xmlns:dcatap="http://data.europa.eu/r5r#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<foaf:Agent rdf:about="https://www.csn.se/om-csn.html">
+	<foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centrala Studiestödsnämnden</foaf:name>
+	<dcterms:type rdf:resource="http://purl.org/adms/publishertype/Company"/>
+</foaf:Agent>
+<dcat:Catalog rdf:about="https://www.csn.se">
+	<dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+	<foaf:homepage>
+		<rdf:Description rdf:about="https://www.csn.se">
+			<dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+			<dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE"/>
+			<dcterms:description xml:lang="sv">A first prototype of Open APIs at CSN</dcterms:description>
+			<dcterms:title xml:lang="en">Prototype of Open APIs at CSN</dcterms:title>
+			<dcterms:title xml:lang="sv">Prototyp Öppna API:er på CSN</dcterms:title>
+			<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-01</dcterms:issued>
+			<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-01</dcterms:modified>
+			<dcat:themeTaxonomy rdf:resource="http://publications.europa.eu/resource/authority/data-theme"/>
+			<dcterms:publisher rdf:resource="https://www.csn.se/om-csn.html"/>
+			<dcat:dataset rdf:resource="https://www.example.se/#Oppna_APIer"/>
+			<dcat:DataService rdf:resource="https://www.example.se/#dataserviceC"/>
+		</rdf:Description>
+	</foaf:homepage>
+</dcat:Catalog>
+<dcat:Dataset rdf:about="https://www.example.se/#Oppna_APIer">
+	<dcterms:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
+	<dcat:keyword xml:lang="en">csn</dcat:keyword>
+	<dcat:keyword xml:lang="en"> api</dcat:keyword>
+	<dcat:keyword xml:lang="en"> school</dcat:keyword>
+	<dcat:keyword xml:lang="en"> university</dcat:keyword>
+	<dcat:keyword xml:lang="en"> komvux </dcat:keyword>
+	<dcat:keyword xml:lang="sv">csn</dcat:keyword>
+	<dcat:keyword xml:lang="sv"> centrala studiestödsnämnden</dcat:keyword>
+	<dcat:keyword xml:lang="sv"> api</dcat:keyword>
+	<dcat:keyword xml:lang="sv"> skola</dcat:keyword>
+	<dcat:keyword xml:lang="sv"> universitet</dcat:keyword>
+	<dcat:keyword xml:lang="sv"> komvux</dcat:keyword>
+	<dcterms:spatial rdf:resource="https://www.geonames.org/6695072/european-union.html"/>
+	<dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+	<dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE"/>
+	<dcterms:description xml:lang="sv">Öppna APIer är en prototyp utvecklad för CSN för att enklare skicka ut data från csn.se</dcterms:description>
+	<dcterms:title xml:lang="sv">Öppna APIer</dcterms:title>
+	<dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/TRAN"/>
+	<dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC"/>
+	<dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-05</dcterms:issued>
+	<dcterms:relation rdf:resource="http://www.relateradresursexempelsida.se"/>
+	<dcterms:isReferencedBy rdf:resource="http://www.exempelreferenssida.se"/>
+	<dcterms:publisher rdf:resource="https://www.csn.se/om-csn.html"/>
+	<dcterms:temporal rdf:nodeID="node1g6sttbnlx353"/>
+	<dcat:contactPoint rdf:resource="https://www.example.se/#contactC"/>
+</dcat:Dataset>
+<dcterms:PeriodOfTime rdf:nodeID="node1g6sttbnlx353">
+	<dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-01</dcat:startDate>
+	<dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-09-01</dcat:endDate>
+</dcterms:PeriodOfTime>
+<vcard:Organization rdf:about="https://www.example.se/#contactC">
+	<vcard:fn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exempel Organisation</vcard:fn>
+	<vcard:hasEmail rdf:resource="mailTo:admin@exempel.se"/>
+	<vcard:hasAddress rdf:nodeID="node1g6sttbnlx354"/>
+	<vcard:hasTelephone rdf:nodeID="node1g6sttbnlx355"/>
+</vcard:Organization>
+<vcard:Address rdf:nodeID="node1g6sttbnlx354">
+	<vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sverige</vcard:country-name>
+	<vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Testgatan 5</vcard:street-address>
+	<vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 76543</vcard:postal-code>
+	<vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Tranemo</vcard:locality>
+</vcard:Address>
+<vcard:Voice rdf:nodeID="node1g6sttbnlx355">
+	<vcard:hasValue rdf:resource="tel:0799887655"/>
+</vcard:Voice>
+<dcat:DataService rdf:about="https://www.example.se/#dataserviceC">
+	<dcterms:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/RESTRICTED"/>
+	<dcat:keyword xml:lang="sv">rest</dcat:keyword>
+	<dcat:keyword xml:lang="sv"> datatjänst</dcat:keyword>
+	<dcat:endpointDescription rdf:resource="http://www.beskrivningDatatjanstC.se"/>
+	<dcterms:title xml:lang="sv">Datatjänst C</dcterms:title>
+	<dcat:endpointURL rdf:resource="http://www.datatjanstC.se"/>
+	<dcterms:license rdf:resource="https://www.example.se/#dataserviceC/license"/>
+	<dcat:contactPoint rdf:resource="https://www.example.se/#contactPointC2"/>
+</dcat:DataService>
+<dcterms:LicenseDocument rdf:about="https://www.example.se/#dataserviceC/license">
+	<dcterms:description xml:lang="sv">Beskrivning av licens för Datatjänst</dcterms:description>
+	<dcterms:title xml:lang="sv">namn på licens för DataTjänst</dcterms:title>
+</dcterms:LicenseDocument>
+<vcard:Organization rdf:about="https://www.example.se/#contactPointC2">
+	<vcard:fn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Namn på Organisation 2</vcard:fn>
+	<vcard:hasEmail rdf:resource="mailTo:kontakt@organization2.se"/>
+	<vcard:hasAddress rdf:nodeID="node1g6sttbnlx356"/>
+	<vcard:hasTelephone rdf:nodeID="node1g6sttbnlx357"/>
+</vcard:Organization>
+<vcard:Address rdf:nodeID="node1g6sttbnlx356">
+	<vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sverige</vcard:country-name>
+	<vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Testvägen 24</vcard:street-address>
+	<vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 93847</vcard:postal-code>
+	<vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Backa</vcard:locality>
+</vcard:Address>
+<vcard:Voice rdf:nodeID="node1g6sttbnlx357">
+	<vcard:hasValue rdf:resource="tel:07923568945"/>
+</vcard:Voice>
+
+</rdf:RDF>

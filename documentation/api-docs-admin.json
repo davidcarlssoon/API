@@ -1,0 +1,225 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Open API created for CSN",
+        "description": "This is an API created by the students David Carlsson and Mikolaj Wagner during a summer internship at CSN (the Swedish board of student finance). The purpose of the API is to enable and streamline spreading of information from the governal agency to external web pages. This in order to reach stakeholders such as students and pupils that would otherwise miss out on important information.",
+        "termsOfService": "https://www.csn.se/om-csn/lag-och-ratt.html",
+        "contact": {
+            "name": "David Carlsson & Mikolaj Wagner",
+            "url": "",
+            "email": "david.carlsson@csn.se"
+        },
+        "license": {
+            "name": "Apache License",
+            "url": "https://apache.org/licenses/LICENSE-2.0"
+        },
+        "version": "v1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8081",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/admin/messages/{id2}": {
+            "put": {
+                "tags": [
+                    "message-controller"
+                ],
+                "operationId": "replaceMessage",
+                "parameters": [
+                    {
+                        "name": "id2",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Message"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Message"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "message-controller"
+                ],
+                "operationId": "deleteMessage",
+                "parameters": [
+                    {
+                        "name": "id2",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/admin/messages": {
+            "post": {
+                "tags": [
+                    "message-controller"
+                ],
+                "operationId": "newMessage",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Message"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Message"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/public/messages": {
+            "get": {
+                "tags": [
+                    "message-controller"
+                ],
+                "operationId": "getAllMessages",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MessageList"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/public/messages/{id2}": {
+            "get": {
+                "tags": [
+                    "message-controller"
+                ],
+                "operationId": "getOneMessage",
+                "parameters": [
+                    {
+                        "name": "id2",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Message"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Message": {
+                "type": "object",
+                "properties": {
+                    "id2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "shortId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "headline": {
+                        "type": "string"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "hyperlink": {
+                        "type": "string"
+                    },
+                    "author": {
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "type": "string"
+                    },
+                    "endDate": {
+                        "type": "string"
+                    },
+                    "publishingDate": {
+                        "type": "string"
+                    },
+                    "logo": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "MessageList": {
+                "type": "object",
+                "properties": {
+                    "messages": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Message"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

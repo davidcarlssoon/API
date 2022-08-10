@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
+    <rdf:Description rdf:about="https://www.csn.se/om-csn.html">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent" />
+        <foaf:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centrala Studiestödsnämnden</foaf:name>
+        <dcterms:type rdf:resource="http://purl.org/adms/publishertype/Company" />
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.csn.se">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Catalog" />
+        <dcterms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0" />
+        <foaf:homepage rdf:resource="https://www.csn.se" />
+        <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG" />
+        <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE" />
+        <dcterms:description xml:lang="sv">A first prototype of Open APIs at CSN</dcterms:description>
+        <dcterms:title xml:lang="en">Prototype of Open APIs at CSN</dcterms:title>
+        <dcterms:title xml:lang="sv">Prototyp Öppna API:er på CSN</dcterms:title>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-25</dcterms:issued>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-25</dcterms:modified>
+        <dcat:themeTaxonomy rdf:resource="http://publications.europa.eu/resource/authority/data-theme" />
+        <dcterms:publisher rdf:resource="https://www.csn.se/om-csn.html" />
+        <dcat:dataset rdf:resource="https://www.csn.se/oppet-api/oppet-api.html" />
+        <dcat:DataService rdf:resource="http://localhost:8080/public/messages/om" />
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.csn.se/oppet-api/oppet-api.html">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset" />
+        <dcterms:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC" />
+        <dcat:keyword xml:lang="en">csn</dcat:keyword>
+        <dcat:keyword xml:lang="en"> api</dcat:keyword>
+        <dcat:keyword xml:lang="en"> school</dcat:keyword>
+        <dcat:keyword xml:lang="en"> university</dcat:keyword>
+        <dcat:keyword xml:lang="en"> komvux </dcat:keyword>
+        <dcat:keyword xml:lang="sv">csn</dcat:keyword>
+        <dcat:keyword xml:lang="sv"> centrala studiestödsnämnden</dcat:keyword>
+        <dcat:keyword xml:lang="sv"> api</dcat:keyword>
+        <dcat:keyword xml:lang="sv"> skola</dcat:keyword>
+        <dcat:keyword xml:lang="sv"> universitet</dcat:keyword>
+        <dcat:keyword xml:lang="sv"> komvux</dcat:keyword>
+        <dcterms:spatial rdf:resource="https://www.geonames.org/6695072/european-union.html" />
+        <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG" />
+        <dcterms:language rdf:resource="http://publications.europa.eu/resource/authority/language/SWE" />
+        <dcterms:description xml:lang="sv">Öppna APIer är en prototyp utvecklad för CSN för att enklare skicka ut data från csn.se</dcterms:description>
+        <dcterms:title xml:lang="sv">Öppna APIer</dcterms:title>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/TRAN" />
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/EDUC" />
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-05</dcterms:issued>
+        <dcterms:publisher rdf:resource="https://www.csn.se/om-csn.html" />
+        <dcterms:temporal rdf:nodeID="_n0" />
+        <dcat:contactPoint rdf:resource="http://www.csn.se/oppet-api/oppet-api.html" />
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_n0">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime" />
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-07-01</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-09-01</dcat:endDate>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.csn.se/oppet-api/oppet-api.html">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization" />
+        <vcard:fn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSN</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailTo:mikolaj.wagner@csn.se" />
+        <vcard:hasEmail rdf:resource="mailTo:david.carlsson@csn.se" />
+        <vcard:hasAddress rdf:nodeID="_n1" />
+        <vcard:hasTelephone rdf:nodeID="_n2" />
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_n1">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address" />
+        <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sverige</vcard:country-name>
+        <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norra Tjärngatan 2</vcard:street-address>
+        <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85231</vcard:postal-code>
+        <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sundsvall</vcard:locality>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_n2">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Voice" />
+        <vcard:hasValue rdf:resource="tel:0771276000" />
+    </rdf:Description>
+    <rdf:Description rdf:about="http://localhost:8080/public/messages/om">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService" />
+        <dcterms:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/RESTRICTED" />
+        <dcat:keyword xml:lang="sv">rest</dcat:keyword>
+        <dcat:keyword xml:lang="sv"> öppet api, api, öppen, öppet</dcat:keyword>
+        <dcat:endpointDescription rdf:resource="http://localhost:8080/public/messages/description" />
+        <dcterms:title xml:lang="sv">Öppet API: Universitet</dcterms:title>
+        <dcat:endpointURL rdf:resource="http://localhost:8080/public/messages" />
+        <dcterms:license rdf:resource="http://localhost:8080/public/messages/license" />
+        <dcat:contactPoint rdf:resource="https://www.csn.se/kontakta-oss.html" />
+    </rdf:Description>
+    <rdf:Description rdf:about="http://localhost:8080/public/messages/license">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument" />
+        <dcterms:description xml:lang="sv">Beskrivning av licens för Öppna Api:er hos CSN</dcterms:description>
+        <dcterms:title xml:lang="sv">namn på licens för Öppna Api:er hos CSN</dcterms:title>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.csn.se/kontakta-oss.html">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization" />
+        <vcard:fn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centrala Studiestödsnämnden</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailTo:mikolaj.wagner@csn.se" />
+        <vcard:hasEmail rdf:resource="mailTo:david.carlsson@csn.se" />
+        <vcard:hasAddress rdf:nodeID="_n3" />
+        <vcard:hasTelephone rdf:nodeID="_n4" />
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_n3">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address" />
+        <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sverige</vcard:country-name>
+        <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norra Tjärngatan 2</vcard:street-address>
+        <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 85231</vcard:postal-code>
+        <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> Sundsvall</vcard:locality>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="_n4">
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Voice" />
+        <vcard:hasValue rdf:resource="tel:0771276000" />
+    </rdf:Description>
+</rdf:RDF>

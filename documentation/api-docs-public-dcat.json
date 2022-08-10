@@ -1,0 +1,178 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Open API created for CSN",
+    "description": "This is an API created by the students David Carlsson and Mikolaj Wagner during a summer internship at CSN (the Swedish board of student finance). The purpose of the API is to enable and streamline spreading of information from the governal agency to external web pages. This in order to reach stakeholders such as students and pupils that would otherwise miss out on important information.",
+    "termsOfService": "https://www.csn.se/om-csn/lag-och-ratt.html",
+    "contact": {
+      "name": "David Carlsson & Mikolaj Wagner",
+      "url": "",
+      "email": "david.carlsson@csn.se"
+    },
+    "x-dcat": {
+      "dcat-catalog": {
+        "about": "https://www.csn.se",
+        "title-sv": "Prototyp Öppna API:er på CSN",
+        "title-en": "Prototype of Open APIs at CSN",
+        "description-sv": "A first prototype of Open APIs at CSN",
+        "publisher": {
+          "about": "https://www.csn.se/om-csn.html",
+          "name": "Centrala Studiestödsnämnden",
+          "type": "Company"
+        },
+        "license": "https://www.apache.org/licenses/LICENSE-2.0",
+        "issued": "2022-07-25",
+        "homepage": "https://www.csn.se",
+        "modified": "2022-07-25"
+      },
+      "dcat-dataset": {
+        "about": "https://www.csn.se/oppet-api/oppet-api.html",
+        "title-sv": "Öppna APIer",
+        "description-sv": "Öppna APIer är en prototyp utvecklad för CSN för att enklare skicka ut data från csn.se",
+        "contactPoint": {
+          "about": "www.csn.se/oppet-api/oppet-api.html",
+          "name": "CSN",
+          "type": "Organization",
+          "email": "mikolaj.wagner@csn.se; david.carlsson@csn.se",
+          "address": "Norra Tjärngatan 2; 85231; Sundsvall; Sverige",
+          "phone": "0771276000"
+        },
+        "keyword-sv": "csn; centrala studiestödsnämnden; api; skola; universitet; komvux",
+        "keyword-en": "csn; api; school; university; komvux ",
+        "theme": "TRAN; EDUC",
+        "issued": "2022-07-05",
+        "spatialUrl": "https://www.geonames.org/6695072/european-union.html",
+        "temporal": {
+          "startDate": "2022-07-01",
+          "endDate": "2022-09-01"
+        },
+        "accessRights": "Public"
+      },
+      "dcat-dataservice": {
+        "about": "http://localhost:8080/public/messages/om",
+        "title-sv": "Öppet API: Universitet",
+        "endpointURL": "http://localhost:8080/public/messages",
+        "endpointDescription": "http://localhost:8080/public/messages/description",
+        "contactPoint": {
+          "about": "https://www.csn.se/kontakta-oss.html",
+          "type": "Organization",
+          "name": "Centrala Studiestödsnämnden",
+          "email": "mikolaj.wagner@csn.se; david.carlsson@csn.se",
+          "phone": "0771276000",
+          "address": "Norra Tjärngatan 2; 85231; Sundsvall; Sverige"
+        },
+        "keyword-sv": "rest; öppet api, api, öppen, öppet",
+        "licensedoc": {
+          "about": "http://localhost:8080/public/messages/license",
+          "title-sv": "namn på licens för Öppna Api:er hos CSN",
+          "description-sv": "Beskrivning av licens för Öppna Api:er hos CSN"
+        },
+        "accessRights": "Restricted"
+      }
+    }
+  },
+  "paths": {
+    "/public/messages": {
+      "get": {
+        "tags": ["message-controller"],
+        "operationId": "getAllMessages",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/public/messages/{id2}": {
+      "get": {
+        "tags": ["message-controller"],
+        "operationId": "getOneMessage",
+        "parameters": [
+          {
+            "name": "id2",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Message"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Message": {
+        "type": "object",
+        "properties": {
+          "id2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shortId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "headline": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "hyperlink": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "publishingDate": {
+            "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "MessageList": {
+        "type": "object",
+        "properties": {
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Message"
+            }
+          }
+        }
+      }
+    }
+  }
+}
