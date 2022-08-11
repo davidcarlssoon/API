@@ -1,6 +1,6 @@
 # open_api
 
-Det här är ett API utvecklat av David Carlsson och Mikolaj Wagner under ett internship på CSN under sommaren 2022.
+Det här är ett API utvecklat av David Carlsson och Mikolaj Wagner under ett internship på CSN sommaren 2022.
 
 API:et är speciellt utvecklat för att kunna ta emot information från Sitevisions inbyggda API och vidareförmedla.
 Tanken med detta är att kommunikatörer på organisationer som använder Sitevision endast ska kunna kopiera 
